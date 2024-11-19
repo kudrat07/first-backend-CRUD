@@ -28,5 +28,7 @@ mongoose
     console.log("error", error);
   });
 
-
-app.use("api/v1",userRouter);
+app.get("/", (req, res)=>{
+  res.send("This is homepage baby")
+})
+app.use(userRouter);
